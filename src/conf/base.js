@@ -9,5 +9,8 @@ module.exports = {
 	apps: [{
 		repoName: 'kdonoel-daniel-api',
 		destFolder: '/opt/apps/kdonoel-daniel/api'
+	}, {
+		repoName: 'kdonoel-daniel-web',
+		destFolder: '/opt/apps/kdonoel-daniel/web'
 	}]
 };
