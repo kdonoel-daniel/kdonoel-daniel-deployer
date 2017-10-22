@@ -7,7 +7,12 @@
 	},
 	"dependencies": {
 		"deep-extend": "^0.5.0",
-		"github-api": "^3.0.0"
+		"filesize": "^3.5.11",
+		"github-api": "^3.0.0",
+		"path": "^0.12.7",
+		"rimraf-promise": "^2.0.0",
+		"tar": "^4.0.2",
+		"wget-improved": "^1.5.0"
 	},
 	"main": "index.js",
 	"repository": "https://github.com/kdonoel-daniel/kdonoel-daniel-deployer.git",
