@@ -5,6 +5,13 @@
 	"scripts": {
 		"start": "node src/index.js"
 	},
+	"author": {
+		"name": "Benjamin DANIEL",
+		"email": "benjamin.b.daniel+github@gmail.com"
+	},
+	"engines": {
+		"node": ">=8.0.0"
+	},
 	"dependencies": {
 		"deep-extend": "^0.5.0",
 		"filesize": "^3.5.11",
@@ -16,6 +23,5 @@
 	},
 	"main": "index.js",
 	"repository": "https://github.com/kdonoel-daniel/kdonoel-daniel-deployer.git",
-	"author": "Benjamin DANIEL",
 	"license": "MIT"
 }
