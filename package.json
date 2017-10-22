@@ -1,0 +1,16 @@
+{
+	"name": "deployer",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node src/index.js"
+	},
+	"dependencies": {
+		"deep-extend": "^0.5.0",
+		"github-api": "^3.0.0"
+	},
+	"main": "index.js",
+	"repository": "https://github.com/kdonoel-daniel/kdonoel-daniel-deployer.git",
+	"author": "Benjamin DANIEL",
+	"license": "MIT"
+}
