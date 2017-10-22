@@ -32,6 +32,7 @@ const env = process.env.NODE_ENV || 'development';
 			total: 1
 		});
 
+		let previousProgress = 0;
 		await new Promise((resolve, reject) => {
 			download.on('error', function (err) {
 				console.log(err);
@@ -44,10 +45,10 @@ const env = process.env.NODE_ENV || 'development';
 				console.log(output);
 				resolve(output);
 			});
+
 			download.on('progress', function (progress) {
-				if (!bar.complete) {
-					bar.tick(progress);
-				}
+				bar.tick(progress - previousProgress);
+				previousProgress = progress;
 			});
 		});
 
