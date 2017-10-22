@@ -1,5 +1,6 @@
 const GitHub = require('github-api');
 const Path = require('path');
+const ProgressBar = require('progress');
 const wget = require('wget-improved');
 const filesize = require('filesize');
 const rimrafPromise = require('rimraf-promise');
@@ -24,6 +25,13 @@ const env = process.env.NODE_ENV || 'development';
 		await rimrafPromise(Path.join(app.destFolder, '*'));
 
 		const download = wget.download(asset.browser_download_url, outputFile);
+		const bar = new ProgressBar('Downloading [:bar] :percent :etas', {
+			complete: '=',
+			incomplete: ' ',
+			width: 50,
+			total: 1
+		});
+
 		await new Promise((resolve, reject) => {
 			download.on('error', function (err) {
 				console.log(err);
@@ -37,7 +45,9 @@ const env = process.env.NODE_ENV || 'development';
 				resolve(output);
 			});
 			download.on('progress', function (progress) {
-				// code to show progress bar
+				if (!bar.complete) {
+					bar.tick(progress);
+				}
 			});
 		});
 

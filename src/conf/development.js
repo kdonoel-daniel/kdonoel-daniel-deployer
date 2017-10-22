@@ -1,6 +1,6 @@
 module.exports = {
 	apps: [{
-		repoName: 'kdonoel-daniel-api',
+		repoName: 'kdonoel-daniel-web',
 		destFolder: '/tmp'
 	}]
 };
