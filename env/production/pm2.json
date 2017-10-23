@@ -1,0 +1,18 @@
+{
+	"apps": [
+		{
+			"cwd": "/opt/apps/kdonoel-daniel/api/dist",
+			"env": {
+				"DEBUG": "kdos-daniel-api:*",
+				"NODE_ENV": "production"
+			},
+			"exec_mode": "fork_mode",
+			"log_date_format": "YYYY-MM-DD HH:mm",
+			"log_file": "/opt/logs/nodes/pm2-kdos-daniel-api.log",
+			"error_file": "/opt/logs/nodes/pm2-kdos-daniel-api-err.log",
+			"out_file": "/opt/logs/nodes/pm2-kdos-daniel-api-out.log",
+			"name": "kdos-daniel-api",
+			"script": "src/index.js"
+		}
+	]
+}
