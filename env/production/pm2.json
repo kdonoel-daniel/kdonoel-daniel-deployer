@@ -13,6 +13,20 @@
 			"out_file": "/opt/logs/nodes/pm2-kdos-daniel-api-out.log",
 			"name": "kdos-daniel-api",
 			"script": "src/index.js"
+		},
+		{
+			"cwd": "/opt/apps/kdonoel-chaboud/api/dist",
+			"env": {
+				"DEBUG": "kdos-chaboud-api:*",
+				"NODE_ENV": "production"
+			},
+			"exec_mode": "fork_mode",
+			"log_date_format": "YYYY-MM-DD HH:mm",
+			"log_file": "/opt/logs/nodes/pm2-kdos-chaboud-api.log",
+			"error_file": "/opt/logs/nodes/pm2-kdos-chaboud-api-err.log",
+			"out_file": "/opt/logs/nodes/pm2-kdos-chaboud-api-out.log",
+			"name": "kdos-chaboud-api",
+			"script": "src/index.js"
 		}
 	]
 }
